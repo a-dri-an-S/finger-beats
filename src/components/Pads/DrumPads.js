@@ -11,7 +11,7 @@ const DrumPads = ({
     handleClapTrigger 
     }) => {
     return (
-        <div className="tone-drums-pads">
+        <div className="tone-drum-pads">
             <DrumPad name={"Kck"} handleTrigger={handleKickTrigger}/>
             <DrumPad name={"Snr"} handleTrigger={handleSnareTrigger}/>
             <DrumPad name={"O Hi-Ht"} handleTrigger={handleOHatTrigger}/>

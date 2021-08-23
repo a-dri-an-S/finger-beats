@@ -2,36 +2,15 @@ h1 {
     text-align: center;
     font-weight: 400;
     letter-spacing: 6px;
-    animation: flicker 1.5s infinite alternate;
-    color: #fff;
-    animation: pulsate 1.5s infinite alternate; 
-}
-
-@keyframes pulsate {
-    100% {
-      /* Larger blur radius */
     text-shadow:
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 40px #fff,
-        0 0 80px #fff,
-        0 0 100px #fff,
-        0 0 120px #fff,
-        0 0 150px #fff,
-        0 0 200px #fff;
-    }
-    0% {
-      /* Smaller blur radius */
-    text-shadow:
-        0 0 2px #fff,
-        0 0 4px #fff,
-        0 0 6px #fff,
-        0 0 10px #fff,
-        0 0 45px #fff,
-        0 0 55px #fff,
-        0 0 70px #fff,
-        0 0 80px #fff;
-    }
+    0 0 15px #fff,
+    0 0 30px #fff,
+    0 0 41px #fff,
+    0 0 52px #fff,
+    0 0 82px #fff,
+    0 0 120px #fff,
+    0 0 152px #fff,
+    0 0 200px #fff;
 }
 
 h3 {
@@ -89,10 +68,10 @@ button:active {
 }
 
 .tone-drums {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center; */
+    align-content: center;
 }
 
 .tone-drum-pads {
