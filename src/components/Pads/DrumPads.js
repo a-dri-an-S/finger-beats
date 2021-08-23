@@ -1,21 +1,26 @@
 import DrumPad from "./DrumPad";
 
-const DrumPads = () => {
+const DrumPads = ({ 
+    handleKickTrigger, 
+    handleSnareTrigger, 
+    handleOHatTrigger, 
+    handleCHatTrigger, 
+    handleCymbalTrigger, 
+    handleShakerTrigger, 
+    handleTriangleTrigger, 
+    handleClapTrigger 
+    }) => {
     return (
-        <main className="tone-drums">
-            <h1>Finger Drums</h1>
-            <div className="tone-drums-pads">
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-                <DrumPad />
-            </div>
-
-        </main>
+        <div className="tone-drums-pads">
+            <DrumPad name={"Kck"} handleTrigger={handleKickTrigger}/>
+            <DrumPad name={"Snr"} handleTrigger={handleSnareTrigger}/>
+            <DrumPad name={"O Hi-Ht"} handleTrigger={handleOHatTrigger}/>
+            <DrumPad name={"C Hi-Hat"} handleTrigger={handleCHatTrigger}/>
+            <DrumPad name={"Cymbl"} handleTrigger={handleCymbalTrigger}/>
+            <DrumPad name={"Shkr"} handleTrigger={handleShakerTrigger}/>
+            <DrumPad name={"Trngl"} handleTrigger={handleTriangleTrigger}/>
+            <DrumPad name={"Clp"} handleTrigger={handleClapTrigger}/>
+        </div>
     );
 }
 
