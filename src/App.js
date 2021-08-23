@@ -9,19 +9,37 @@ function App() {
 
   let sampler = useRef(null);
 
+  const handleKeyKick = (e) => {
+    if (e.key === "q") {
+      sampler.current.triggerAttack("C2")
+    }
+  }
+
+  const handleKeySnare = (e) => {
+    if (e.key === "w") {
+      sampler.current.triggerAttack("C3")
+    }
+  }
+  
+  
   useEffect(() => {
+
     sampler.current = new Sampler(
       { C2, C3 }
     ).toDestination()
+
+    document.addEventListener('keydown', handleKeyKick);
+    document.addEventListener('keydown', handleKeySnare);
+
   }, [])
 
-  const handleKick = () => sampler.current.triggerAttack("C2")
+  const handleClickKick = () => sampler.current.triggerAttack("C2")
   const handleSnare = () => sampler.current.triggerAttack("C3")
 
   return (
     <div className="App">
       <h1>Finger Beats</h1>
-      <button onMouseDown={handleKick}>Kick</button>
+      <button onMouseDown={handleClickKick}>Kick</button>
       <button onMouseDown={handleSnare}>Snare</button>
     </div>
   );
