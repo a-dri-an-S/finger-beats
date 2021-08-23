@@ -2,29 +2,11 @@ h1 {
     text-align: center;
     font-weight: 400;
     letter-spacing: 6px;
-    text-shadow:
-    0 0 15px #fff,
-    0 0 30px #fff,
-    0 0 41px #fff,
-    0 0 52px #fff,
-    0 0 82px #fff,
-    0 0 120px #fff,
-    0 0 152px #fff,
-    0 0 200px #fff;
 }
 
 h3 {
     font-weight: 400;
     letter-spacing: 5px;
-    text-shadow:
-        0 0 15px #fff,
-        0 0 30px #fff,
-        0 0 41px #fff,
-        0 0 52px #fff,
-        0 0 82px #fff,
-        0 0 120px #fff,
-        0 0 152px #fff,
-        0 0 200px #fff;
 }
 
 button{
@@ -34,37 +16,16 @@ button{
     letter-spacing: 3px;
     background-color: rgba(128, 230, 225, 0.397);
     color: lightgrey;
-    border-color: #fff;
-    box-shadow: 
-        0 0 5px #fff,
-        0 0 18px #fff,
-        0 0 10px #fff,
-        0 0 12px #fffe,
-        0 0 25px #fff,
-        inset 0 0 20px #fff;
+    border-color: rgba(255, 255, 255, 0.644);
 }
 
 button:hover {
     border: none;
     background-color: rgba(128, 230, 225, 0.795);
-    box-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #fffe,
-        0 0 82px #fff,
-        inset 0 0 20px #fff;
 }
 
 button:active {
     background-color: rgb(128, 230, 225);
-    box-shadow:
-        0 0 7px rgb(128, 230, 225),
-        0 0 10px rgb(128, 230, 225),
-        0 0 21px rgb(128, 230, 225),
-        0 0 42px rgb(128, 230, 225),
-        0 0 82px rgb(128, 230, 225),
-        inset 0 0 20px #fff;
 }
 
 .tone-drums {
