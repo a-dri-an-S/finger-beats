@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Sampler } from "tone";
 import C2 from "./resources/808 kit/808-kick.mp3"
 import C3 from "./resources/808 kit/808-snare.mp3"
