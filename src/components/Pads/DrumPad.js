@@ -1,7 +1,7 @@
-const DrumPad = ({ name, handleTrigger }) => {
+const DrumPad = ({ name, keyPress, handleTrigger }) => {
     return ( 
         <div className="drum-pad">
-            <button className="drum-trigger" onMouseDown={handleTrigger}/>
+            <button className="drum-trigger" onMouseDown={handleTrigger}>{ keyPress }</button>
             <label><h3>{ name }</h3></label>
         </div>
     );

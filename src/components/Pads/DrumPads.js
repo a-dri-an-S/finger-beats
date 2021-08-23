@@ -12,14 +12,14 @@ const DrumPads = ({
     }) => {
     return (
         <div className="tone-drum-pads">
-            <DrumPad name={"Kck"} handleTrigger={handleKickTrigger}/>
-            <DrumPad name={"Snr"} handleTrigger={handleSnareTrigger}/>
-            <DrumPad name={"O Hi-Ht"} handleTrigger={handleOHatTrigger}/>
-            <DrumPad name={"C Hi-Hat"} handleTrigger={handleCHatTrigger}/>
-            <DrumPad name={"Cymbl"} handleTrigger={handleCymbalTrigger}/>
-            <DrumPad name={"Shkr"} handleTrigger={handleShakerTrigger}/>
-            <DrumPad name={"Trngl"} handleTrigger={handleTriangleTrigger}/>
-            <DrumPad name={"Clp"} handleTrigger={handleClapTrigger}/>
+            <DrumPad keyPress={"[q]"} name={"Kck"} handleTrigger={handleKickTrigger}/>
+            <DrumPad keyPress={"[w]"} name={"Snr"} handleTrigger={handleSnareTrigger}/>
+            <DrumPad keyPress={"[e]"} name={"O Hi-Ht"} handleTrigger={handleOHatTrigger}/>
+            <DrumPad keyPress={"[r]"} name={"C Hi-Hat"} handleTrigger={handleCHatTrigger}/>
+            <DrumPad keyPress={"[a]"} name={"Cymbl"} handleTrigger={handleCymbalTrigger}/>
+            <DrumPad keyPress={"[s]"} name={"Shkr"} handleTrigger={handleShakerTrigger}/>
+            <DrumPad keyPress={"[d]"} name={"Trngl"} handleTrigger={handleTriangleTrigger}/>
+            <DrumPad keyPress={"[f]"} name={"Clp"} handleTrigger={handleClapTrigger}/>
         </div>
     );
 }
