@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Sampler } from "tone";
+import useKeypress from './hooks/useKeypress'
 import './App.css';
 
 import DrumPads from "./components/Pads/DrumPads";
@@ -21,49 +22,40 @@ function App() {
     ).toDestination()
   }, [])
 
-  //Keys for Key Triggers    
-  const handleKeyKick = e => e.key === "q" ? sampler.current.triggerAttack("C2") : null;
-  const handleKeySnare = e => e.key === "w" ? sampler.current.triggerAttack("D2") : null;
-  const handleKeyOHit = e => e.key === "e" ? sampler.current.triggerAttack("E2") : null;
-  const handleKeyCHit = e => e.key === "r" ? sampler.current.triggerAttack("F2") : null;
-  const handleKeyCymbal = e => e.key === "a" ? sampler.current.triggerAttack("G2") : null;
-  const handleKeyShaker = e => e.key === "s" ? sampler.current.triggerAttack("A3") : null;
-  const handleKeyTriangle = e => e.key === "d" ? sampler.current.triggerAttack("B3") : null;
-  const handleKeyClap = e => e.key === "f" ? sampler.current.triggerAttack("C3") : null;
   
-  // Key Triggers
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyKick);
-    return () => document.removeEventListener('keydown', handleKeyKick)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeySnare);
-    return () => document.removeEventListener('keydown', handleKeySnare)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyOHit);
-    return () => document.removeEventListener('keydown', handleKeyOHit)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyCHit);
-    return () => document.removeEventListener('keydown', handleKeyCHit)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyCymbal);
-    return () => document.removeEventListener('keydown', handleKeyCymbal)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyShaker);
-    return () => document.removeEventListener('keydown', handleKeyShaker)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyTriangle);
-    return () => document.removeEventListener('keydown', handleKeyTriangle)
-  }, [])
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyClap);
-    return () => document.removeEventListener('keydown', handleKeyClap)
-  }, [])
+  // Kick Trigger
+  useKeypress('q', () => {
+    sampler.current.triggerAttack("C2")
+  })
+  // Snare Trigger
+  useKeypress('w', () => {
+    sampler.current.triggerAttack("D2")
+  })
+  // OHit Trigger
+  useKeypress('e', () => {
+    sampler.current.triggerAttack("E2")
+  })
+  // Chit Trigger
+  useKeypress('r', () => {
+    sampler.current.triggerAttack("F2")
+  })
+  // Cymbal Trigger
+  useKeypress('a', () => {
+    sampler.current.triggerAttack("G2")
+  })
+  // Kick Shaker
+  useKeypress('s', () => {
+    sampler.current.triggerAttack("A3")
+  })
+  // Kick Triangle
+  useKeypress('d', () => {
+    sampler.current.triggerAttack("B3")
+  })
+  // Kick Clap
+  useKeypress('f', () => {
+    sampler.current.triggerAttack("C3")
+  })
+
   
   // Mousedown Triggers
   const handleKickTrigger = () => sampler.current.triggerAttack("C2")
